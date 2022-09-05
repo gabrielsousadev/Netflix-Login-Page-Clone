@@ -6,16 +6,17 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-html, body
+body
 {
-    width: 100%;
+    position: relative;
+    height: 100vh;
 }
 
 .container
 {
-    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 2%;
+    padding: 0 1%;
+    padding-bottom: 2.5rem;
 }
 
 body
@@ -25,6 +26,8 @@ body
                         url(./assets/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
 }
 
 nav .logo
@@ -34,7 +37,7 @@ nav .logo
 
 nav .logo img
 {
-    width: 220px;
+    width: 200px;
 }
 
 main
@@ -44,6 +47,7 @@ main
     margin: 0 auto 80px;
     padding: 50px;
     color: #737373;
+    border-radius: 10px;
 }
 
 main form h1
@@ -88,6 +92,17 @@ main form .form-g button
     margin-top: 20px;
 }
 
+.form-footer a
+{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.form-footer label
+{
+    margin-left: 10px;
+}
+
 .form-footer input[type=checkbox]
 {
     float: left;
@@ -110,8 +125,14 @@ main form .form-g button
 .box-description a img
 {
     width: 25px;
-    margin-left: 10px;
+    margin-right: 10px;
     border-radius: 3px;
+}
+
+.box-description-link-white
+{
+    color: #ffffff;
+    text-decoration: none;
 }
 
 .box-description p
@@ -141,12 +162,15 @@ main form .form-g button
 {
     padding: 20px;
     background-color: #000101a8;
+    position: absolute; 
+    bottom: 0%;
+    width: 100%;
 }
 
 .footer-login .box-footer
 {
   max-width: 1000px;
-  margin: 0 auto;   
+  margin: 0 auto;
 }
 
 .footer-login .box-footer .box-single
@@ -179,4 +203,54 @@ main form .form-g button
 {
     color: #737373;
     text-decoration: none;
+}
+
+@media (max-width:730px) 
+{
+    body
+    {
+        background-image: none;
+        background-color: black;
+    }
+
+    main
+    {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .box-description
+    {
+        margin-top: 20px;
+    }
+
+    .box-footer .box-single ul li
+    {
+        width: 33.3%;
+    }
+
+    .divider
+    {
+        display: block;
+    }
+
+    .footer-login
+    {
+        padding: 20px;
+        background-color: #000101a8;
+    }
+}
+
+@media (max-width:360px) 
+{
+    .box-footer .box-single ul li
+    {
+        width: 50%;
+    }
+    
+    .footer-login
+    {
+        padding: 20px;
+        background-color: #000101a8;
+    }
 }
